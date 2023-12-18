@@ -30,14 +30,13 @@ function render(variables = {}) {
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
   // reset the website body with the new html output
-  document.querySelector("#widget_content").innerHTML = `<div class="widget">
-            ${cover}
+  document.querySelector(
+    "#widget_content"
+  ).innerHTML = `<div class="widget">${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>${variables.name ? variables.name : "Name"} ${
-    variables.lastName ? variables.lastName : "Lastname"
-  }</h1>          <h2>${
-    variables.role ? variables.role : "Your profession"
-  }</h2>
+          <h1>${variables.name ? variables.name : "Name"} 
+          ${variables.lastName ? variables.lastName : "Lastname"}</h1>
+          <h2>${variables.role ? variables.role : "Your profession"}</h2>
           <h3>${variables.city ? variables.city : "Your city"}</h3>
           <h3>${variables.country ? variables.country : "Your Country"}</h3>
           <ul class=${variables.socialMediaPosition}>
@@ -66,9 +65,11 @@ window.onload = function() {
     // if includeCover is true the algorithm should show the cover image
     includeCover: true,
     // this is the image's url that will be used as a background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "https://cdn.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_1280.jpg",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://media.licdn.com/dms/image/D4E03AQE9vclbtW9vFA/profile-displayphoto-shrink_800_800/0/1701341201427?e=1708560000&v=beta&t=opYDuo6O8LQ8gArWoDxnGUKrGT_VEqONVzgHl7d9NGU",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
