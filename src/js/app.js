@@ -41,16 +41,16 @@ function render(variables = {}) {
           <h3>${variables.country ? variables.country : "Your Country"}</h3>
           <ul class=${variables.socialMediaPosition}>
             <li><a href="https://twitter.com/${
-              variables.twitter
+              variables.twitter ? variables.twitter : "sesmo_dev"
             }"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://github.com/${
-              variables.github
+              variables.github ? variables.github : "SabrinaESMO"
             }"><i class="fab fa-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/${
-              variables.linkedin
+              variables.linkedin ? variables.linkedin : "sesmo-dev"
             }"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/${
-              variables.instagram
+              variables.instagram ? variables.instagram : "sesmo.dev"
             }"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
